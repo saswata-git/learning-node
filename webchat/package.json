@@ -1,11 +1,20 @@
 {
     "name": "RealTimeWebChat",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "Real time web chat",
+    "scripts": {
+    	"start" : "node index.js"
+    } ,
     "dependencies": {
         "socket.io": "latest",
         "express": "latest",
         "ejs": "latest"
     },
-    "author": "developer"
+    "repository": {
+    	"type": "git",
+    	"url": "https://github.com/saswata-git/learning-node.git"
+    },
+    "private" : true,
+    "author": "Saswata Pal",
+    "license": "No license" 
 }
