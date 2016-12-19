@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqlIDs": {
+    "host": "localhost",
+    "port": 0,
+    "url": "mysql://root:Mass4Pass@localhost/loopback",
+    "database": "loopback",
+    "password": "Mass4Pass",
+    "name": "mysqlIDs",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
