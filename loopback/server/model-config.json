@@ -16,10 +16,6 @@
   "User": {
     "dataSource": "db"
   },
-  "CoffeeShop": {
-    "dataSource": "db",
-    "public": true
-  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
@@ -35,9 +31,5 @@
   "Role": {
     "dataSource": "db",
     "public": false
-  },
-  "CoffeeShop": {
-    "dataSource": "db",
-    "public": true
   }
 }
