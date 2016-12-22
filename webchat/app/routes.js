@@ -1,27 +1,23 @@
-module.exports = function(app, router, User) {
+
+var userController = require(__dirname+'/app/models/userController');
+var homeController = require(__dirname+'/app/models/homeController');
+
+module.exports = function(app, router, userModel) {
 	
 	router.use(function (req,res,next) {
 	  console.log("/" + req.method);
 	  next();
 	});
 
-	router.get("/",function(req,res){
-	  res.render("index.html");
-	});
-
-	router.get("/about",function(req,res){
-	  res.render("about.html");
-	});
-
-	router.get("/contact",function(req,res){
-	  res.render("contact.html");
-	});
+	router.get("/", homeController.index);
+	router.get("/about", homeController.about);
+	router.get("/contact", homeController.contact);
 
 	//add user
 	router.route('/api/users')
 	  // create a bear (accessed at POST http://localhost:8080/api/bears)
 	  .post(function(req, res) {
-	      var user = new User();      // create a new instance of the User model
+	      var user = new userModel();      // create a new instance of the User model
 	      user.firstName = req.body.firstName;  // set the user name (comes from the request)
 	      user.lastName = req.body.lastName; 
 	      // save the bear and check for errors
@@ -36,7 +32,7 @@ module.exports = function(app, router, User) {
 
 	//fetch all users 
 	.get(function(req, res) {
-	  User.find(function(err, users){
+	  userModel.find(function(err, users){
 	    if(err)
 	      res.send(err);
 
@@ -47,7 +43,7 @@ module.exports = function(app, router, User) {
 	router.route('/api/users/:userId')
 
 	.get(function(req, res){
-	  User.findById(req.params.userId, function(err, user){
+	  userModel.findById(req.params.userId, function(err, user){
 	    if(err)
 	      res.send(err);
 
@@ -57,7 +53,7 @@ module.exports = function(app, router, User) {
 	})
 
 	.put(function(req, res){
-	  User.findById(req.params.userId, function(err, user){
+	  userModel.findById(req.params.userId, function(err, user){
 	    if(err)
 	      res.send(err);
 
@@ -75,7 +71,7 @@ module.exports = function(app, router, User) {
 	})
 
 	.delete(function(req, res){
-	  User.remove({
+	  userModel.remove({
 	    _id: req.params.userId
 	  }, function(err, user){
 	    if(err)

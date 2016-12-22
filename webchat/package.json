@@ -1,21 +1,22 @@
 {
-    "name": "RealTimeWebChat",
-    "version": "0.0.1",
-    "description": "Real time web chat",
-    "scripts": {
-    	"start" : "node index.js"
-    } ,
-    "dependencies": {
-        "socket.io": "latest",
-        "express": "latest",
-        "ejs": "latest",
-	"mongoose": "latest",
-	"body-parser": "latest"
-    },
-    "repository": {
-    	"type": "git",
-    	"url": "https://github.com/saswata-git/learning-node.git"
-    },
-    "author": "Saswata Pal",
-    "license": "UNLICENSED" 
+  "name": "RealTimeWebChat",
+  "version": "0.0.1",
+  "description": "Real time web chat",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "cors": "^2.8.1",
+    "ejs": "latest",
+    "express": "latest",
+    "mongoose": "latest",
+    "socket.io": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saswata-git/learning-node.git"
+  },
+  "author": "Saswata Pal",
+  "license": "UNLICENSED"
 }
