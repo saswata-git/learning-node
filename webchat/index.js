@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var mongoose   = require('mongoose');
+var mongoose = require('mongoose');
 var port = process.env.PORT || 8000;
 var bodyParser = require('body-parser');
 var path = require('path');
@@ -12,8 +12,9 @@ global.__assetPath = path.resolve(__dirname)+'/assets/';
 global.__controllerPath = path.resolve(__dirname)+'/app/controllers/';
 global.__modelPath = path.resolve(__dirname)+'/app/models/';
 global.__viewPath = path.resolve(__dirname)+'/app/views/';
+
 // config files
-var db = require(__dirname+'/app/config/Database');
+var db = require(__configPath+'/Database');
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
