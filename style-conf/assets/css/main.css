@@ -1,0 +1,27 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+div.top-bar{
+	background-color: #c0c0c0; 
+	height: 60px;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li{
+	display: inline-block;;
+}
+
+nav li {
+	margin: 0;
+    padding: 8px;
+}
+
+a{
+	text-decoration: none;
+	color: #f66d52;
+}
