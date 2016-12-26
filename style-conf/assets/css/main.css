@@ -1,27 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 body{
-	margin: 0;
-	padding: 0;
+  color: #888;
+  font: 300 14px/24px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-div.top-bar{
-	background-color: #c0c0c0; 
-	height: 60px;
-}
-ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
+h1, h2, h3, h4{
+  color: #648880;
 }
 
-li{
-	display: inline-block;;
+h1{
+  font-size: 36px;
+  line-height: 44px;
 }
-
-nav li {
-	margin: 0;
-    padding: 8px;
+h2{
+  font-size: 24px;
+  line-height: 44px;
 }
-
+h3{
+  font-size: 21px;
+}
+h4{
+  font-size: 18px;
+}
+h5{
+  color: #a9b2b9;;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+strong{
+  font-size: 400;
+}
+cite, em{
+  font-style: italic;
+}
+a:hover{
+  color: #a9b2b9;
+}
 a{
-	text-decoration: none;
-	color: #f66d52;
+  color: #648880;
+  text-decoration: none;
+}
+p{
+  text-align: center; 
+  text-indent: 20px;
+  /*letter-spacing: -.5em;*/
+  /*text-shadow: 3px 6px 2px rgba(0, 0, 0, .3);*/
+}
+p a {
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.container,
+.grid {
+  margin: 0 auto;
+  width: 960px;
+}
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.grid,
+.col-1-3,
+.col-2-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-1-3,
+.col-2-3  {
+  display: inline-block;
+  vertical-align: top;
+}
+.col-1-3 {
+  width: 33.33%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+}
+.btn-alt {
+  border: 1px solid #dfe2e5;
+  padding: 10px 30px;
+}
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+.logo {
+  border-top: 4px solid #648880;
+  float: left;
+  padding: 40px 0 22px 0;
+  font-size: 48px;
+  line-height: 44px;
+}
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+
+.primary-footer {
+  color: #648880;
+  font-size: 14px;
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
+.primary-footer small {
+  float: left;
+  font-weight: 400;
+}
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.hero {
+  padding: 22px 80px 66px 80px;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+}
+.hero h2{
+  font-size: 36px;
+}
+.hero p{
+  font-size: 24px;
+}
+.tagline{
+  margin: 66px 0 22px 0;
+  text-align: right;
+}
+.primary-nav{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.teaser a:hover h3{
+  color: #a9b2b9;
+}
+.note {
+  text-decoration: underline;
+}
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+nav {
+  text-align: right;
 }
